@@ -1,1 +1,235 @@
-Hello World
+<!DOCTYPE html>
+<head>
+
+	<title>Yuhan Xiao</title>
+
+	<meta name="keywords" content="Yuhan Xiao, Carnegie Mellon, CMU" />
+	<meta name="author" content="Yuhan Xiao">
+	<meta name="description" content="Yuhan Xiao is an undergraduate student in Electrical and Computer Engineering at Carnegie Mellon University."/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="content-language" content="en-us">
+
+    <link rel="site icon" href="tartans.ico">
+
+    <!-- bootstrap CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<!-- icon -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+	
+	<!-- css -->
+	<link rel="stylesheet" href="style.css">
+	
+	<!-- add analytics -->
+
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+	function year() {
+	  var d = new Date();
+	  var yearStarted = 2017;
+	  var perfix;
+	  var n;
+
+	  if (d.getMonth() < 6) {
+	  	prefix = ""
+	    n = d.getFullYear() - yearStarted;
+	  }
+	  else if (d.getMonth() < 9) {
+	  	prefix = "rising "
+	    n = d.getFullYear() - yearStarted + 1;
+	  }
+	  else {
+	  	prefix = ""
+	  	n = d.getFullYear() - yearStarted + 1;
+	  }
+	  
+	  if (n == 1) return prefix+"freshman";
+	  else if (n == 2) return prefix+"sophomore";
+	  else if (n == 3) return prefix+"junior";
+	  else return prefix+"senior";
+	}
+	</script>
+
+	<nav class="nav flex-column">
+	  <a class="nav-link active" href="#">Introduction</a>
+	  <a class="nav-link" href="#">Projects</a>
+	  <a class="nav-link" href="#">Experiencs</a>
+	  <a class="nav-link" href="#">Leadership</a>
+	  <a class="nav-link" href="#">More</a>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2" id="profile-pic">
+				<img src="profile.png" alt="Yuhan Xiao's profile picture" class="pic">
+			</div>
+			
+			<article class="col-sm-10" id="introduction">
+				<h3>I am Yuhan Xiao, a <script type="text/javascript">document.write(year())</script> studying Electrical and Computer Engineering in Carnegie Mellon University.</h3>
+			</article>
+		</div>
+	</div>
+
+	<div class="container" id="projects">
+		<div class="row">
+			<h1>Projects</h1>
+		</div>
+
+		<div class="row">
+			<article class="col-sm-4">
+				<h3>LabelImg</h3>
+				<ul>
+					<li>
+						Created the batch deletion method to speed up labelling, which improved the average annotation speed from 0.005 FPS to 0.02 FPS
+					</li>
+					<li>
+						Configured keyboard shortcuts for controlling label boxes on sample images
+					</li>
+				</ul>
+			</article>
+
+			<article class="col-sm-4">
+				<h3><a href="https://github.com/yuhanx0728/Transit">Transit</a></h3>
+				<ul>
+					<li>
+						A Google Home Action that enables users to check when the bus is coming
+					</li>
+					<li>
+						Built on Flask, Python, Dialogflow, Google Home Assistant, Pittsburgh Public Transport API and Heroku
+					</li>
+				</ul>
+			</article>
+
+			<article class="col-sm-4">
+				<h3><a href="https://github.com/yuhanx0728/website-monitor">Website Monitor</a></h3>
+				<ul>
+					<li>
+						Allow users to track the content of a website, and be notified through text once changes are detected
+					</li>
+					<li>
+						Built on Requests library and Twilio API
+					</li>
+				</ul>
+			</article>
+		</div>
+
+		<div class="row">
+			<article class="col-sm-4">
+				<h3>HackCMU Project - CMU Route Finder</h3>
+				<ul>
+					<li>
+						Utilized A-star algorithm to find the shortest route from source to destination
+					</li>
+					<li>
+						Built a django web app to help students navigate on campus
+					</li>
+				</ul>
+			</article>
+
+			<article class="col-sm-4">
+				<h3><a href="https://gist.github.com/yuhanx0728/f523fa30050f415c4c551208ea0085ca">SpotiClock</a></h3>
+				<ul>
+					<li>
+						An IFTTT Applet that allows you to set a song from Spotify as your alarm clock
+					</li>
+					<li>
+						Built on AppleScript and IFTTT
+					</li>
+				</ul>
+			</article>
+
+			<article class="col-sm-4">
+				<h3>Personal website</h3>
+				<ul>
+					<li>Used HTML, CSS, Bootstrap and Javascript to create a semi-dynamic personal website</li>
+				</ul>
+			</article>
+		</div>
+	</div>
+
+	<div class="container" id="experiences">
+		<div class="row">
+			<h1>Experiences</h1>
+		</div>
+
+		<div class="row">
+			<article class="col-sm-4">
+				<h3>Research Assistant</h3>
+				<ul>
+					<li>
+						Led a team to pre-process the datasets used for deep learning algorithm in General Motor autonomous vehicles 
+					</li>
+					<li>
+						Developed new features for annotation tools such as label batch deletion and keyboard shortcuts to improve developers’ user experience
+					</li>
+
+				</ul>
+			</article>
+
+			<article class="col-sm-4">
+				<h3>Bestwise Operation Team</h3>
+				<ul>
+					<li>
+						Improved the user experience of the airport transit system by developing a mobile app called Airport Transit Service
+					</li>
+					<li>
+						Drove the communication between product managers and software engineers with feedbacks from end users
+					</li>
+				</ul>
+			</article>
+
+
+			<article class="col-sm-4">
+				<h3>Supplemental Instruction Leader</h3>
+				<ul>
+					<li>
+						Conducted weekly collaborative learning sessions of a 50-people group for the course Introduction to Electrical and Computer Engineering
+					</li>
+				</ul>
+			</article>
+
+		</div>
+	</div>
+
+	<div class="container" id="leadership">
+		<div class="row">
+			<h1>Leadership</h1>
+		</div>
+
+		<div class="row">
+			<article class="col-sm-4">
+				<h3>IEEE Vice President</h3>
+			</article>
+
+			<article class="col-sm-4">
+				<h3>Student Senate</h3>
+			</article>
+
+			<article class="col-sm-4">				
+			</article>
+
+		</div>
+	</div>
+
+	<div class="container" id="summary">
+		<div class="row">
+			<article>
+				<h3><i class="fas fa-bolt"></i>&nbsp;Outside of my classes, I love building things with great functionalities. I recently built a simple <a href="https://github.com/yuhanx0728/website-monitor" target="_blank">website tracker</a> that notifies me every few hours about changes on a specified website via text.</h3><br/>
+				<h3><i class="fas fa-bolt"></i>&nbsp;I also love organizing events, for my <a href="https://www.facebook.com/IEEE.CMU/" target="_blank">student organization</a> or for my friends. I've done events like registration help sessions to help students with course planning, professor talks on topics that are not covered in introductory engineering curriculum. I've learned some important communication and team management skills from my experiences.</h3><br/>
+				<h3><i class="fas fa-bolt"></i>&nbsp;You can find me on <a href="https://www.linkedin.com/in/yuhan-x-07247614b/" target="_blank">LinkedIn</a>, or email me at <a href="mailto:yuhanx@andrew.cmu.edu"" target="_blank">yuhanx@andrew.cmu.edu</a></h3><br/>
+			</article>
+		</div>
+	</div>
+	
+</body>
+</html>
