@@ -4,9 +4,10 @@
   - [ ] SpotiClock
   - [ ] website monitor
     - [ ] update web monitor
-- leadership content
+  - [ ] smooth transition to project page
+- [ ] leadership content
 - navbar
   - [ ] smooth transition when jump to different sections
   - [ ] when jump the landing is inaccurate(can't see section titles)
-- color scheme
-- link this website to my old website
+- [ ] color scheme
+- [ ] link this website to my old website
