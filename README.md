@@ -1,6 +1,6 @@
 - project content
   - [ ] Transit
-    - [ ] update Transit 
+    - [ ] update Transit
   - [ ] SpotiClock
   - [ ] website monitor
     - [ ] update web monitor
@@ -9,5 +9,6 @@
 - navbar
   - [ ] smooth transition when jump to different sections
   - [ ] when jump the landing is inaccurate(can't see section titles)
+  - [ ] center items
 - [ ] color scheme
 - [ ] link this website to my old website
