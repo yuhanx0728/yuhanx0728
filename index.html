@@ -27,40 +27,13 @@
 	<!-- css -->
 	<link rel="stylesheet" href="style.css">
 
-	<
+	<script src="year.js"></script>
 	
 	<!-- add analytics -->
 
 </head>
 
 <body>
-	
-	<script type="text/javascript">
-	function year() {
-	  var d = new Date();
-	  var yearStarted = 2017;
-	  var perfix;
-	  var n;
-
-	  if (d.getMonth() < 6) {
-	  	prefix = ""
-	    n = d.getFullYear() - yearStarted;
-	  }
-	  else if (d.getMonth() < 9) {
-	  	prefix = "rising "
-	    n = d.getFullYear() - yearStarted + 1;
-	  }
-	  else {
-	  	prefix = ""
-	  	n = d.getFullYear() - yearStarted + 1;
-	  }
-	  
-	  if (n == 1) return prefix+"freshman";
-	  else if (n == 2) return prefix+"sophomore";
-	  else if (n == 3) return prefix+"junior";
-	  else return prefix+"senior";
-	}
-	</script>
 
 	<div class="container d-flex flex-row">
 		<nav class="navbar fixed-top bg-light navbar-light justify-content-center">
@@ -78,7 +51,7 @@
 			</div>
 			
 			<article class="col-sm-10" id="intro">
-				<h3>I am Yuhan Xiao, a <script type="text/javascript">document.write(year())</script> studying Electrical and Computer Engineering in Carnegie Mellon University.</h3>
+				<h3>I am Yuhan Xiao, a <script>document.write(year())</script> studying Electrical and Computer Engineering in Carnegie Mellon University.</h3>
 			</article>
 		</div>
 	</div>
