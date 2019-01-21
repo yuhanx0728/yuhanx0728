@@ -1,5 +1,8 @@
 - [ ] have my friends double check the content of project pages
 - [ ] have my friends double check the wording of leadership section
+- [ ] fading in loading page
+- [ ] hosting project pages as my own webpages
+- [ ] link project pages with main pages
 - [ ] do more projects
 - [ ] CNAME
 - project content
