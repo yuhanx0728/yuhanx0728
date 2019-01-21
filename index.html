@@ -24,7 +24,6 @@
 	<!-- font -->
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 	
-	<!-- css -->
 	<link rel="stylesheet" href="style.css">
 
 	<script src="year.js"></script>
@@ -45,205 +44,195 @@
 		</nav>
 	</div>
 
-	<div class="container" id="me">
-		<div class="row">
-			<h3>Hi! I am Yuhan, a <script>document.write(year())</script> studying Electrical and Computer Engineering in Carnegie Mellon University.</h3>
+	<span class="anchor" id="me"></span>
+	<div class="container">
+		<div class="row d-flex justify-content-center mt-4">
+			<h3 class="col-sm-8">Hi! I am Yuhan, a <script>document.write(year())</script> studying Electrical and Computer Engineering in Carnegie Mellon University.</h3>
 		</div>
 	</div>
 
-	<div class="container" id="projects">
-		<div class="row">
+	<span class="anchor" id="projects"></span>
+	<div class="container">
+		<div class="row header">
 			<h1>Projects</h1>
 		</div>
 
 		<div class="row">
-			<div class="card col-sm-4" style="width: 18rem;">
-			  	<div class="card-body">
-			  		<img class="card-img-top" src="https://via.placeholder.com/200/5DBCD2/808080?Text=LabelImg" alt="thumbnail">
-				    <h5 class="card-title">LabelImg</h5>
-				    <p class="card-text">
-					    <ul>
-							<li>Created the batch deletion method to speed up labelling, which improved the average annotation speed from 0.005 FPS to 0.02 FPS
-							</li>
-							<li>Configured keyboard shortcuts for controlling label boxes on sample images</li>
-						</ul>
-				    </p>
-			  	</div>
+			<div class="col-sm-4 card-container d-flex align-items-stretch">
+				<div class="card mr-2 ml-2 mt-4">
+				  	<div class="card-body">
+				  		<img class="card-img-top" src="pic/LabelImg.jpg" alt="thumbnail">
+					    <h5 class="card-title">LabelImg</h5>
+					    <p class="card-text">
+							Created the batch deletion method to speed up labelling, which improved the average annotation speed from 0.005 FPS to 0.02 FPS<br><br>
+							Configured keyboard shortcuts for controlling label boxes on sample images
+					    </p>
+				  	</div>
+				</div>
 			</div>
 
-			<div class="card col-sm-4" style="width: 18rem;">
-			  	<div class="card-body">
-			  		<img class="card-img-top" src="https://via.placeholder.com/200/5DBCD2/808080?Text=Transit" alt="thumbnail">
-				    <h5 class="card-title">Transit</h5>
-				    <p class="card-text">
-						<ul>
-							<li>A Google Home Action that enables users to check when the bus is coming</li>
-							<li>Built on Flask, Python, Dialogflow, Google Home Assistant, Pittsburgh Public Transport API and Heroku</li>
-						</ul>
-				    </p>
-				    <a href="https://yuhanx0728.github.io/Transit/" target="_blank" class="btn btn-primary">Learn more</a>
-			  	</div>
+			<div class="col-sm-4 card-container d-flex align-items-stretch">
+				<a class="card active-card mr-2 ml-2 mt-4" href="https://yuhanx0728.github.io/Transit/" target="_blank">
+				  	<div class="card-body">
+				  		<img class="card-img-top" src="pic/transit.jpg" alt="thumbnail">
+					    <h5 class="card-title">Transit</h5>
+					    <p class="card-text">
+							A Google Home Action that enables users to check when the bus is coming<br><br>
+							Built on Flask, Python, Dialogflow, Google Home Assistant, Pittsburgh Public Transport API and Heroku
+					    </p>
+				  	</div>
+				</a>
 			</div>
 
-			<div class="card col-sm-4" style="width: 18rem;">
-			  	<div class="card-body">
-			  		<img class="card-img-top" src="https://via.placeholder.com/200/5DBCD2/808080?Text=Website Monitor" alt="thumbnail">
-				    <h5 class="card-title">Website Monitor</h5>
-				    <p class="card-text">
-						<ul>
-							<li>Allow users to track the content of a website, and be notified through text once changes are detected</li>
-							<li>Built on Requests library and Twilio API</li>
-						</ul>
-				    </p>
-				    <a href="https://yuhanx0728.github.io/website-monitor/" target="_blank" class="btn btn-primary">Learn more</a>
-			  	</div>
+			<div class="col-sm-4 card-container d-flex align-items-stretch">
+				<a class="card active-card mr-2 ml-2 mt-4" href="https://yuhanx0728.github.io/website-monitor/" target="_blank">
+				  	<div class="card-body">
+				  		<img class="card-img-top" src="pic/website-monitor.png" alt="thumbnail">
+					    <h5 class="card-title">Website Monitor</h5>
+					    <p class="card-text">
+							Allow users to track the content of a website, and be notified through text once changes are detected<br><br>
+							Built on Requests library and Twilio API
+				  	</div>
+				</a>
 			</div>
 		</div>
 
 		<div class="row">
-
-			<div class="card col-sm-4" style="width: 18rem;">
-			  	<div class="card-body">
-			  		<img class="card-img-top" src="https://via.placeholder.com/200/5DBCD2/808080?Text=CMU Route Finder" alt="thumbnail">
-				    <h5 class="card-title">CMU Route Finder</h5>
-				    <p class="card-text">
-						<ul>
-							<li>Utilized A-star algorithm to find the shortest route from source to destination</li>
-							<li>Built a django web app to help students navigate on campus</li>
-						</ul>
-				    </p>
-			  	</div>
+			<div class="col-sm-4 card-container d-flex align-items-stretch">
+				<div class="card mr-2 ml-2 mt-4">
+				  	<div class="card-body">
+				  		<img class="card-img-top" src="pic/cmu-route-finder.jpg" alt="thumbnail">
+					    <h5 class="card-title">CMU Route Finder</h5>
+					    <p class="card-text">
+							Utilized A-star algorithm to find the shortest route from source to destination<br><br>
+							Built a django web app to help students navigate on campus
+					    </p>
+				  	</div>
+				</div>
 			</div>
 
-			<div class="card col-sm-4" style="width: 18rem;">
-			  	<div class="card-body">
-			  		<img class="card-img-top" src="https://via.placeholder.com/200/5DBCD2/808080?Text=SpotiClock" alt="thumbnail">
-				    <h5 class="card-title">SpotiClock</h5>
-				    <p class="card-text">
-						<ul>
-							<li>An IFTTT Applet that allows you to set a song from Spotify as your alarm clock</li>
-							<li>Built on AppleScript and IFTTT</li>
-						</ul>
-				    </p>
-				    <a href="https://yuhanx0728.github.io/SpotiClock/" target="_blank" class="btn btn-primary">Learn more</a>
-			  	</div>
+			<div class="col-sm-4 card-container d-flex align-items-stretch">
+				<a class="card active-card mr-2 ml-2 mt-4" href="https://yuhanx0728.github.io/SpotiClock/" target="_blank">
+				  	<div class="card-body">
+				  		<img class="card-img-top" src="pic/spoticlock.jpg" alt="thumbnail">
+					    <h5 class="card-title">SpotiClock</h5>
+					    <p class="card-text">
+							An IFTTT Applet that allows you to set a song from Spotify as your alarm clock<br><br>
+							Built on AppleScript and IFTTT
+					    </p>
+				  	</div>
+				</a>
 			</div>
-
 		</div>
 	</div>
 
-	<div class="container" id="experience">
-		<div class="row">
+	<span class="anchor" id="experience"></span>
+	<div class="container">
+		<div class="row header">
 			<h1>Experience</h1>
 		</div>
 
 		<div class="row">
 
-			<div class="card col-sm-4" style="width: 18rem;">
-			  	<div class="card-body">
-			  		<img class="card-img-top" src="https://via.placeholder.com/200/5DBCD2/808080?Text=Research Assistant" alt="thumbnail">
-				    <h5 class="card-title">Research Assistant</h5>
-				    <p class="card-text">
-						<ul>
-							<li>Led a team to pre-process the datasets used for deep learning algorithm in General Motor autonomous vehicles</li>
-							<li>Developed new features for annotation tools such as label batch deletion and keyboard shortcuts to improve developers’ user experience</li>
-						</ul>
-				    </p>
-			  	</div>
+			<div class="col-sm-4 card-container d-flex align-items-stretch">
+				<div class="card mr-2 ml-2 mt-4">
+				  	<div class="card-body">
+					    <h5 class="card-title">Research Assistant</h5>
+					    <p class="card-text">
+							Led a team to pre-process the datasets used for deep learning algorithm in General Motor autonomous vehicles<br><br>
+							Developed new features for annotation tools such as label batch deletion and keyboard shortcuts to improve developers’ user experience
+					    </p>
+				  	</div>
+				</div>
 			</div>
 
-			<div class="card col-sm-4" style="width: 18rem;">
-			  	<div class="card-body">
-			  		<img class="card-img-top" src="https://via.placeholder.com/200/5DBCD2/808080?Text=Operation Team" alt="thumbnail">
-				    <h5 class="card-title">Operation Team</h5>
-				    <p class="card-text">
-						<ul>
-							<li>Improved the user experience of the airport transit system by developing a mobile app called Airport Transit Service</li>
-							<li>Drove the communication between product managers and software engineers with feedbacks from end users</li>
-						</ul>
-				    </p>
-			  	</div>
+			<div class="col-sm-4 card-container d-flex align-items-stretch">
+				<div class="card mr-2 ml-2 mt-4">
+				  	<div class="card-body">
+					    <h5 class="card-title">Operation Team</h5>
+					    <p class="card-text">
+							Improved the user experience of the airport transit system by developing a mobile app called Airport Transit Service<br><br>
+							Drove the communication between product managers and software engineers with feedbacks from end users
+					    </p>
+				  	</div>
+				</div>
 			</div>
 
-			<div class="card col-sm-4" style="width: 18rem;">
-			  	<div class="card-body">
-			  		<img class="card-img-top" src="https://via.placeholder.com/200/5DBCD2/808080?Text=Tutor" alt="thumbnail">
-				    <h5 class="card-title">Tutor</h5>
-				    <p class="card-text">
-						<ul>
-							<li>Conducted weekly collaborative learning sessions of a 50-people group for the course Introduction to Electrical and Computer Engineering</li>
-						</ul>
-				    </p>
-			  	</div>
+			<div class="col-sm-4 card-container d-flex align-items-stretch">
+				<div class="card mr-2 ml-2 mt-4">
+				  	<div class="card-body">
+					    <h5 class="card-title">Tutor</h5>
+					    <p class="card-text">
+							Conducted weekly collaborative learning sessions of a 50-people group for the course Introduction to Electrical and Computer Engineering
+					    </p>
+				  	</div>
+				</div>
 			</div>
+
 		</div>
 	</div>
 
-	<div class="container" id="leadership">
-		<div class="row">
+	<span class="anchor" id="leadership"></span>
+	<div class="container">
+		<div class="row header">
 			<h1>Leadership</h1>
 		</div>
-
 		<div class="row">
-			<div class="card col-sm-4" style="width: 18rem;">
-			  	<div class="card-body">
-			  		<img class="card-img-top" src="https://via.placeholder.com/200/5DBCD2/808080?Text=IEEE Vice President" alt="thumbnail">
-				    <h5 class="card-title">IEEE Vice President</h5>
-				    <p class="card-text">
-				    	<ul>
-				    		<li>Spearheaded the event planning process for IEEE events, holding the majority of the student-led events under ECE department</li>
-				    		<li>Structured and optimized event and team management</li>
-				    	</ul>
-				    </p>
-			  	</div>
+			<div class="col-sm-4 card-container d-flex align-items-stretch">
+				<a href="https://www.facebook.com/IEEE.CMU/" target="_blank" class="card active-card mr-2 ml-2 mt-4 mb-4">
+				  	<div class="card-body">
+				  		<img class="card-img-top" src="pic/ieee.jpg" alt="thumbnail">
+					    <h5 class="card-title">IEEE Vice President</h5>
+					    <p class="card-text">
+					    	Spearheaded the event planning process for IEEE events, holding the majority of the student-led events under ECE department<br><br>
+					    	Structured and optimized event and team management
+					    </p>
+				  	</div>
+				</a>
 			</div>
 
-			<div class="card col-sm-4" style="width: 18rem;">
-			  	<div class="card-body">
-			  		<img class="card-img-top" src="https://via.placeholder.com/200/5DBCD2/808080?Text=Project FORGE" alt="thumbnail">
-				    <h5 class="card-title">Project FORGE</h5>
-				    <p class="card-text">
-					    	<ul>
-				    		<li>Oversaw the in-home visit program where volunteers visit their refugee family weekly to teach English</li>
-				    		<li>Collected and acted on feedback from both beneficiaries and volunteers</li>
-				    	</ul>
-				    </p>
-			  	</div>
+			<div class="col-sm-4 card-container d-flex align-items-stretch">
+				<a href="https://www.contrib.andrew.cmu.edu/org/FORGE/index.html" target="_blank" class="card active-card mr-2 ml-2 mt-4 mb-4">
+				  	<div class="card-body">
+				  		<img class="card-img-top" src="pic/forge.jpeg" alt="thumbnail">
+					    <h5 class="card-title">Project FORGE</h5>
+					    <p class="card-text">
+						    Oversaw the in-home visit program where volunteers visit their refugee family weekly to teach English<br><br>
+							Collected and acted on feedback from both beneficiaries and volunteers
+					    </p>
+				  	</div>
+				</a>
 			</div>
 
-			<div class="card col-sm-4" style="width: 18rem;">
-			  	<div class="card-body">
-			  		<img class="card-img-top" src="https://via.placeholder.com/200/5DBCD2/808080?Text=Student Senate" alt="thumbnail">
-				    <h5 class="card-title">Student Senate</h5>
-				    <p class="card-text">
-				    	<ul>
-				    		<li>Assisted in membership expansion as Vice Chair of Internal Development Committee</li>
-				    	</ul>
-				    </p>
-			  	</div>
+			<div class="col-sm-4 card-container d-flex align-items-stretch">
+				<a href="https://cmusenate.org/committees/internal-development/" target="_blank" class="card active-card mr-2 ml-2 mt-4 mb-4">
+				  	<div class="card-body">
+				  		<img class="card-img-top" src="pic/senate.jpg" alt="thumbnail">
+					    <h5 class="card-title">Student Senate</h5>
+					    <p class="card-text">
+					    	Assisted in membership expansion as Vice Chair of Internal Development Committee
+					    </p>
+				  	</div>
+				</a>
 			</div>
 
 		</div>
 
 	</div>
 
-	<div class="container" id="contact">
-		<div class="row justify-content-center">
-			<a href="http://yuhanx.com/about/Resume_Yuhan Xiao_Software Engineer Intern_Summer 2019.pdf" target="_blank">Download my resume here!</a>
-		</div>
+	<span class="anchor" id="contact"></span>
+	<div class="container">
 		<div class="row">
-			<div class="col-sm-3">
-				<a href="mailto:yuhanxiao97@gmail.com" target="_blank"><i class="fas fa-envelope fa-7x"></i></a>
-			</div>
-			<div class="col-sm-3">
-				<a href="https://www.linkedin.com/in/yuhan-x/" target="_blank"><i class="fab fa-linkedin-in fa-7x"></i></a>
-			</div>
-			<div class="col-sm-3">
-				<a href="https://github.com/yuhanx0728" target="_blank"><i class="fab fa-github-square fa-7x"></i></a>
-			</div>
-			<div class="col-sm-3">
-				<a href="https://www.facebook.com/yuhan.xiao.12" target="_blank"><i class="fab fa-facebook fa-7x"></i></a>
-			</div>
+			<button type="button" class="btn btn-light btn-lg btn-block m-4">
+			<a id="resume-link" href="http://yuhanx.com/about/Resume_Yuhan Xiao_Software Engineer Intern_Summer 2019.pdf" target="_blank">Download my resume here!</a>
+			</button>
+		</div>
+
+		<div class="row d-flex justify-content-center">
+			<a class="p-3" href="mailto:yuhanxiao97@gmail.com" target="_blank"><i class="fas fa-envelope-square fa-3x"></i></a>
+			<a class="p-3" href="https://www.linkedin.com/in/yuhan-x/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+			<a class="p-3" href="https://github.com/yuhanx0728" target="_blank"><i class="fab fa-github-square fa-3x"></i></a>
+			<a class="p-3" href="https://www.facebook.com/yuhan.xiao.12" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
 		</div>
 	</div>
 	
