@@ -1,14 +1,22 @@
+- [ ] why is https://yuhanx0728.github.io/ showing the old website?
+- [ ] change col-sm to col-lg
+- [ ] have my friends double check the content of project pages
+- [ ] have my friends double check the wording of leadership section
+- [ ] fading in loading page
+- [ ] hosting project pages as my own webpages
+- [ ] link project pages with main pages
+- [ ] do more projects
+- [ ] CNAME
 - project content
-  - [ ] Transit
+  - [x] Transit
     - [ ] update Transit
-  - [ ] SpotiClock
-  - [ ] website monitor
+  - [x] SpotiClock
+  - [x] website monitor
     - [ ] update web monitor
-  - [ ] smooth transition to project page
-- [ ] leadership content
+  - [x] smooth transition to project page
+- [x] leadership content
 - navbar
-  - [ ] smooth transition when jump to different sections
-  - [ ] when jump the landing is inaccurate(can't see section titles)
-  - [ ] center items
-- [ ] color scheme
-- [ ] link this website to my old website
+  - [x] smooth transition when jump to different sections
+  - [x] when jump the landing is inaccurate(can't see section titles)
+  - [x] center items
+- [x] color scheme
