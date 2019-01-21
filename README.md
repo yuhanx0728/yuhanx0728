@@ -1,3 +1,5 @@
+- [ ] why is https://yuhanx0728.github.io/ showing the old website?
+- [ ] change col-sm to col-lg
 - [ ] have my friends double check the content of project pages
 - [ ] have my friends double check the wording of leadership section
 - [ ] fading in loading page
