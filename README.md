@@ -2,11 +2,11 @@
 - [ ] change col-sm to col-lg
 - [ ] have my friends double check the content of project pages
 - [ ] have my friends double check the wording of leadership section
-- [ ] fading in loading page
+- [ ] fading in loading page(fix jquery)
 - [ ] hosting project pages as my own webpages
 - [ ] link project pages with main pages
-- [ ] do more projects
-- [ ] CNAME
+- [ ] more projects
+- [ ] CNAME add yuhanx.com/about
 - project content
   - [x] Transit
     - [ ] update Transit
