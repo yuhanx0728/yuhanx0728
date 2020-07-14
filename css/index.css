@@ -3,6 +3,10 @@ body {
 	font-family: Helvetica; 
 }
 
-div#intro{
+div#intro {
 	font-family: Courier;
+}
+
+div#projects span {
+	font-weight: bolder;
 }
