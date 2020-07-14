@@ -4,15 +4,19 @@ body {
 h1 {
 	font-family: Helvetica;
 	text-align: center;
+	font-size: 4rem;
+	vertical-align: middle;
+	color: white;
 }
 
 footer {
 	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 h2 {
 	font-family: Verdana;
-	margin-left: 20px;
 }
 
 div {
@@ -23,13 +27,61 @@ img {
 	height: 200px;
 }
 
-div.wrapper {
+body, html, h2 {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	color: white;
+	font-size: 2rem;
+	text-align: center;
+}
+
+section {
+	height: 100vh;
 	text-align: left;
 	font-family: Courier;
 	padding-top: 5%;
 	padding-bottom: 5%;
 	padding-left: 15%;
 	padding-right: 15%;
-	line-height: 1.6;
+	line-height: 2;
+}
+
+ul {
+	font-size: 1em;
+	padding-left: 8%; 
+	padding-right: 8%; 
+}
+
+.tag {
+}
+
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.yellow {
+	background-color: #ffd099;
+}
+.pink {
+	background-color: #ffa199;
+}
+.red {
+	background-color: #e86375;
+}
+.blue {
+	background-color: #afd6ad;
+}
+.green {
+	background-color: #7cb6a0;
 }
 
