@@ -1,12 +1,35 @@
 body {
-	text-align: center; 
-	font-family: Helvetica; 
+	font-family: Verdana;
+}
+h1 {
+	font-family: Helvetica;
+	text-align: center;
 }
 
-div#intro {
+footer {
+	text-align: center;
+}
+
+h2 {
+	font-family: Verdana;
+	margin-left: 20px;
+}
+
+div {
+	text-align: center;
+}
+
+img {
+	height: 200px;
+}
+
+div.wrapper {
+	text-align: left;
 	font-family: Courier;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 15%;
+	padding-right: 15%;
+	line-height: 1.6;
 }
 
-div#projects span {
-	font-weight: bolder;
-}
