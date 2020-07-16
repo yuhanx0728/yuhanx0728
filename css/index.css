@@ -1,0 +1,38 @@
+body {
+	text-align: center; 
+	font-family: Helvetica; 
+}
+
+div#headshot {
+	margin-top: 75px;
+}
+
+div#headshot h1 {
+	font-family: Verdana; 
+	letter-spacing: 0.15em;
+}
+
+div#intro{
+	font-family: Courier;
+	margin-top: 50px
+}
+
+div#projects {
+	margin-top: 50px;
+}
+
+div#projects span.project-title {
+	font-weight: bolder;
+}
+
+div#projects span.highlighted {
+	font-weight: bold;
+	background-color: yellow;
+}
+
+footer {
+	font-family: Verdana;
+	margin-top: 50px;
+	position: relative;
+}
+
