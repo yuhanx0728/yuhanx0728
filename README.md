@@ -1,7 +1,13 @@
-# Todo
-- [ ] github link disappeared
-- [ ] dynamically pull from github API repo details
-- [ ] make fade in appear in order
-- [ ] flash content when DOM is loading
-- [ ] highlight based on category (web dev: vue, django, etc)
-- [ ] make it more aesthetic in general
+# Project description
+
+My homepage :)
+
+# Tech stack
+
+(Built purely from) Javascript, JQuery, HTML, CSS
+
+# Future improvements
+- [ ] bug: github link disappears after animation
+- [ ] bug: content flashes during DOM loading
+- [ ] use github API to dynamically pull and load project details
+- [ ] highlight keywords in projects when user hovers over "web development" and "machine learning" in introducion
