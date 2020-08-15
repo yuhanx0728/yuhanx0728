@@ -1,6 +1,6 @@
 $(document).ready(function() {
   for (let i = 0; i < fadeInQueue.length; i++) {
-    $(fadeInQueue[i]).hide().delay(i*fadeInInterval).fadeIn(fadeInSpeed)
+    $(fadeInQueue[i]).hide().delay(i * fadeInInterval).fadeIn(fadeInSpeed)
   }
 
   setTimeout(function() {
@@ -11,8 +11,9 @@ $(document).ready(function() {
 
     // when hovering over "web development", "machine learning" under #intro
     // highlight relevant tech stack terms under #projects
-    enableWordGroups()    
-  }, fadeInQueue.length*fadeInInterval)
+    enableWordGroups()
+    // enable hover-over effects as soon as projects are loaded
+  }, (fadeInQueue.length - 4) * fadeInInterval)
 })
 
 // wrap <span> around tech terms (under #projects)
