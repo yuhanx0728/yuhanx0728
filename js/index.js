@@ -1,68 +1,46 @@
 $(document).ready(function() {
-  $("#projects").hide()
-  $("#headshot").hide()
-  $("footer").hide()
-	$("#headshot").fadeIn(800, function() {
-		typewriter()
-    setTimeout(function() {$("#projects").fadeIn(800, function() {
-      $("footer").fadeIn(800)
+  for (let i = 0; i < fadeInQueue.length; i++) {
+    $(fadeInQueue[i]).hide().delay(i*fadeInInterval).fadeIn(fadeInSpeed)
+  }
 
-      // wrap <span></span> around tech terms under project section
-      $("#projects").children().each(function(i) {
-        attachSpanForTechStack($(this))         
-      })
+  setTimeout(function() {
+    // wrap <span> around tech terms under #projects
+    $("#projects .tech-stack").each(function(i) {
+      attachSpanForTechStack($(this))
+    })
 
-      // when hovering over "web development", "machine learning", "big data"
-      // highlight relevant tech stack terms
-      highlightKeywords()
-
-    })}, 1200)
-	})
+    // when hovering over "web development", "machine learning" under #intro
+    // highlight relevant tech stack terms under #projects
+    enableWordGroups()    
+  }, fadeInQueue.length*fadeInInterval)
 })
 
-// wrap <span></span> around tech terms
+// wrap <span> around tech terms (under #projects)
 function attachSpanForTechStack(dom) {
   line = dom.html().split("&nbsp;")
-  terms = line[1].split(", ") // line[1] is where the tech terms are
+  terms = line[0].split(", ")
   newTerms = ""
   cnt = 0
   for (let t of terms) {
-    newTerms += "<span class=\"tech-stack "+ getClassName(t) +"\" >" + t + "</span>"
+    newTerms += "<span class='" + getClassName(t) + "' >" + t + "</span>"
     if (cnt++ < terms.length - 1) {
       newTerms += ", "
     }
   }
-  line[1] = newTerms
+  line[0] = newTerms
   dom.html(line.join("&nbsp;"))
 }
 
-// put words in [interests] from div#intro under <span>
-function highlightKeywords() {
-  let newHTML = ""
-  let oldHTML = $("div#intro").html()
-  let prevI = 0
-  let startI = 0
-  let spanMap = keywords.keys()
-  for (let i = 0; i < keywords.size; i++) {
-    if (i > 0) {
-      prevI = startI + interests[i - 1].length
-    }
-    startI = oldHTML.indexOf(interests[i])
-    newHTML += oldHTML.slice(prevI, startI)
-    newHTML += "<span id='" + spanMap.next().value + "'>" + interests[i] + "</span>"
-  }
-
-  prevI = startI + interests[interests.length - 1].length
-  newHTML += oldHTML.slice(prevI, newHTML.length)
-
-  $("div#intro").html(newHTML)
-
+// enable highlighting a group of words when one is hovered over
+function enableWordGroups() {
+  // e.g. add "web-development" class to "vue.js" <span>, etc, under #projects
   keywords.forEach((val, key, map) => {
-    val.forEach(e => $("div#projects span.tech-stack."+getClassName(e)).addClass(key))
+    val.forEach(e => $("div#projects span."+getClassName(e)).addClass(key))
   })
 
-  $("div#intro span").each(function() {
-    attachHoverOverListener("div#intro span", this.id)
+  // attach listener to each interest under #intro-2
+  $("div#intro span#intro-2 span").each(function() {
+    attachHoverOverListener("div#intro span#intro-2 span", this.id)
   })
 }
 
@@ -87,47 +65,4 @@ function attachHoverOverListener(dom, id) {
 // e.g. "Vue.js" -> "vue-js", "Apache Hbase" -> "apache-hbase"
 function getClassName(word) {
   return word.toLowerCase().split(/[\s.]+/).join("-")
-}
-
-// credit to https://codepen.io/gavra/pen/tEpzn
-function typewriter() {
-  // set up text to print, each item in array is new line
-  var aText = new Array(
-    "I am a rising ECE senior in CMU and a SWE intern at Salesforce.", 
-    "I am interested in web development, big data and machine learning.",
-    "In my free time, I cook and make websites."
-  )
-  var iSpeed = 5 // time delay of print out
-  var iIndex = 0 // start printing array at this posision
-  var iArrLength = aText[0].length // the length of the text array
-  var iScrollAt = 20 // start scrolling up at this many lines
-
-  var iTextPos = 0 // initialise text position
-  var sContents = '' // initialise contents variable
-  var iRow // initialise current row
-   
-  function typing() {
-    sContents =  ' '
-    iRow = Math.max(0, iIndex-iScrollAt)
-
-    while (iRow < iIndex) {
-      sContents += aText[iRow++] + '<br />'
-    }
-
-    $("#intro").html(sContents + aText[iIndex].substring(0, iTextPos) + "_")
-
-    if (iTextPos++ == iArrLength) {
-      iTextPos = 0
-      iIndex++
-      if (iIndex != aText.length) {
-        iArrLength = aText[iIndex].length
-        setTimeout(typing, 100)
-      }
-    } else {
-      setTimeout(typing, iSpeed)
-    }
-  }
-  
-  typing()
-
 }
