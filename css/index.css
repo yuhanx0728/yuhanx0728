@@ -1,6 +1,6 @@
 body {
-	text-align: center; 
-	font-family: Helvetica; 
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
 }
 
 div span.highlighted {
@@ -13,13 +13,16 @@ div#headshot {
 }
 
 div#headshot h1 {
-	font-family: Verdana; 
+	font-family: 'Vollkorn', serif;
 	letter-spacing: 0.15em;
 }
 
 div#intro{
-	font-family: Courier;
 	margin-top: 50px
+}
+
+div#intro span{
+	font-weight: bold;
 }
 
 div#projects {
@@ -27,11 +30,14 @@ div#projects {
 }
 
 div#projects span.project-title {
-	font-weight: bolder;
+	font-weight: bold;
+}
+
+div#projects a {
+	font-style: italic;
 }
 
 footer {
-	font-family: Verdana;
 	margin-top: 50px;
 	position: relative;
 }

@@ -1,39 +1,39 @@
 $(document).ready(function() {
-  $("#projects").hide();
-  $("#headshot").hide();
-  $("footer").hide();
+  $("#projects").hide()
+  $("#headshot").hide()
+  $("footer").hide()
 	$("#headshot").fadeIn(800, function() {
-		typewriter();
+		typewriter()
     setTimeout(function() {$("#projects").fadeIn(800, function() {
-      $("footer").fadeIn(800);
+      $("footer").fadeIn(800)
 
       // wrap <span></span> around tech terms under project section
       $("#projects").children().each(function(i) {
-        attachSpanForTechStack($(this));         
+        attachSpanForTechStack($(this))         
       })
 
       // when hovering over "web development", "machine learning", "big data"
       // highlight relevant tech stack terms
-      highlightKeywords();
+      highlightKeywords()
 
-    })}, 1200);
-	});
-});
+    })}, 1200)
+	})
+})
 
 // wrap <span></span> around tech terms
 function attachSpanForTechStack(dom) {
   line = dom.html().split("&nbsp;")
-  terms = line[1].split(", "); // line[1] is where the tech terms are
-  newTerms = "";
-  cnt = 0;
+  terms = line[1].split(", ") // line[1] is where the tech terms are
+  newTerms = ""
+  cnt = 0
   for (let t of terms) {
-    newTerms += "<span class=\"tech-stack "+ getClassName(t) +"\" >" + t + "</span>";
+    newTerms += "<span class=\"tech-stack "+ getClassName(t) +"\" >" + t + "</span>"
     if (cnt++ < terms.length - 1) {
-      newTerms += ", ";
+      newTerms += ", "
     }
   }
   line[1] = newTerms
-  dom.html(line.join("&nbsp;")); 
+  dom.html(line.join("&nbsp;"))
 }
 
 // put words in [interests] from div#intro under <span>
@@ -86,7 +86,7 @@ function attachHoverOverListener(dom, id) {
 // sanitize input into a HTML class name
 // e.g. "Vue.js" -> "vue-js", "Apache Hbase" -> "apache-hbase"
 function getClassName(word) {
-  return word.toLowerCase().split(/[\s.]+/).join("-");
+  return word.toLowerCase().split(/[\s.]+/).join("-")
 }
 
 // credit to https://codepen.io/gavra/pen/tEpzn
@@ -96,38 +96,38 @@ function typewriter() {
     "I am a rising ECE senior in CMU and a SWE intern at Salesforce.", 
     "I am interested in web development, big data and machine learning.",
     "In my free time, I cook and make websites."
-  );
-  var iSpeed = 5; // time delay of print out
-  var iIndex = 0; // start printing array at this posision
-  var iArrLength = aText[0].length; // the length of the text array
-  var iScrollAt = 20; // start scrolling up at this many lines
-   
-  var iTextPos = 0; // initialise text position
-  var sContents = ''; // initialise contents variable
-  var iRow; // initialise current row
+  )
+  var iSpeed = 5 // time delay of print out
+  var iIndex = 0 // start printing array at this posision
+  var iArrLength = aText[0].length // the length of the text array
+  var iScrollAt = 20 // start scrolling up at this many lines
+
+  var iTextPos = 0 // initialise text position
+  var sContents = '' // initialise contents variable
+  var iRow // initialise current row
    
   function typing() {
-    sContents =  ' ';
-    iRow = Math.max(0, iIndex-iScrollAt);
+    sContents =  ' '
+    iRow = Math.max(0, iIndex-iScrollAt)
 
     while (iRow < iIndex) {
-      sContents += aText[iRow++] + '<br />';
+      sContents += aText[iRow++] + '<br />'
     }
 
-    $("#intro").html(sContents + aText[iIndex].substring(0, iTextPos) + "_");
+    $("#intro").html(sContents + aText[iIndex].substring(0, iTextPos) + "_")
 
     if (iTextPos++ == iArrLength) {
-      iTextPos = 0;
-      iIndex++;
+      iTextPos = 0
+      iIndex++
       if (iIndex != aText.length) {
-        iArrLength = aText[iIndex].length;
-        setTimeout(typing, 100);
+        iArrLength = aText[iIndex].length
+        setTimeout(typing, 100)
       }
     } else {
-      setTimeout(typing, iSpeed);
+      setTimeout(typing, iSpeed)
     }
   }
   
-  typing();
+  typing()
 
 }

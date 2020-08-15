@@ -8,5 +8,7 @@ My homepage :)
 
 # Future improvements
 - [ ] use github API to dynamically pull and load project details
-- [x] highlight key terms in projects when user hovers over "web development", "machine learning", etc in introducion
+- [ ] under `div#project`, fade in row by row
+- [ ] animate emboldening the key interested in `div#intro`
+- [x] highlight key terms in `div#project` when user hovers over "web development", "machine learning", etc in `div#intro`
 - [x] bug: github link disappears after animation
