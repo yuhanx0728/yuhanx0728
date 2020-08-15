@@ -1,4 +1,3 @@
-let allTechStack = new Set();
 $(document).ready(function() {
   $("#projects").hide();
   $("#headshot").hide();
@@ -8,7 +7,7 @@ $(document).ready(function() {
     setTimeout(function() {$("#projects").fadeIn(800, function() {
       $("footer").fadeIn(800);
 
-      // put each of the tech stack terms into a span tag
+      // wrap <span></span> around tech terms under project section
       $("#projects").children().each(function(i) {
         attachSpanForTechStack($(this));         
       })
@@ -21,19 +20,20 @@ $(document).ready(function() {
 	});
 });
 
-function attachSpanForTechStack(t) {
-  line = t.html().split("&nbsp;")
-  words = line[1].split(", ");
-  newWords = "";
+// wrap <span></span> around tech terms
+function attachSpanForTechStack(dom) {
+  line = dom.html().split("&nbsp;")
+  terms = line[1].split(", "); // line[1] is where the tech terms are
+  newTerms = "";
   cnt = 0;
-  for (let w of words) {
-    allTechStack.add(w);
-    newWords += "<span class=\"tech-stack "+ getClassName(w) +"\" >" + w + "</span>";
-    if (cnt++ < words.length - 1) {
-      newWords += ", ";
+  for (let t of terms) {
+    newTerms += "<span class=\"tech-stack "+ getClassName(t) +"\" >" + t + "</span>";
+    if (cnt++ < terms.length - 1) {
+      newTerms += ", ";
     }
   }
-  t.html(line[0] + "&nbsp;" + newWords); 
+  line[1] = newTerms
+  dom.html(line.join("&nbsp;")); 
 }
 
 // put words in [interests] from div#intro under <span>
@@ -66,6 +66,7 @@ function highlightKeywords() {
   })
 }
 
+// attach listeners whenever <span id='_dom'> is hovered over
 function attachHoverOverListener(dom, id) {
   const _dom = dom + "#" + id
   $(_dom).hover(
@@ -82,9 +83,8 @@ function attachHoverOverListener(dom, id) {
   )
 }
 
-/* sanitize input into a HTML class name
- * e.g. "Vue.js" -> "vue-js", "Apache Hbase" -> "apache-hbase"
- */
+// sanitize input into a HTML class name
+// e.g. "Vue.js" -> "vue-js", "Apache Hbase" -> "apache-hbase"
 function getClassName(word) {
   return word.toLowerCase().split(/[\s.]+/).join("-");
 }
