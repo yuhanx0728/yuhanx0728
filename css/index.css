@@ -3,6 +3,11 @@ body {
 	font-family: Helvetica; 
 }
 
+div span.highlighted {
+	font-weight: bold;
+	background-color: yellow;
+}
+
 div#headshot {
 	margin-top: 75px;
 }
@@ -23,11 +28,6 @@ div#projects {
 
 div#projects span.project-title {
 	font-weight: bolder;
-}
-
-div#projects span.highlighted {
-	font-weight: bold;
-	background-color: yellow;
 }
 
 footer {

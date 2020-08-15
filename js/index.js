@@ -7,67 +7,94 @@ $(document).ready(function() {
 		typewriter();
     setTimeout(function() {$("#projects").fadeIn(800, function() {
       $("footer").fadeIn(800);
+
+      // put each of the tech stack terms into a span tag
       $("#projects").children().each(function(i) {
-        line = $(this).html().split("&nbsp;")
-        words = line[1].split(", ");
-        newWords = "";
-        cnt = 0;
-        for (let w of words) {
-          allTechStack.add(w);
-          newWords += "<span class=\"tech-stack "+ getClassName(w) +"\" >" + w + "</span>";
-          if (cnt++ < words.length - 1) {
-            newWords += ", ";
-          }
-        }
-        $(this).html(line[0] + "&nbsp;" + newWords);          
-        console.log(words);
+        attachSpanForTechStack($(this));         
       })
 
-      attachHoverOverListener();
+      // when hovering over "web development", "machine learning", "big data"
+      // highlight relevant tech stack terms
+      highlightKeywords();
+
     })}, 1200);
 	});
 });
 
-
-function attachHoverOverListener() {
-  $("div#projects span.tech-stack").hover(function() {
-    console.log("1");
-    currStack = "";
-    var classList = $(this).attr('class').split(/\s+/);
-    $.each(classList, function(index, item) {
-      if (item !== "tech-stack") {
-        currStack = item;
-      }
-    });
-
-    if (currStack != "tech-stack") {
-      $("#projects").find("span."+currStack).addClass("highlighted");
+function attachSpanForTechStack(t) {
+  line = t.html().split("&nbsp;")
+  words = line[1].split(", ");
+  newWords = "";
+  cnt = 0;
+  for (let w of words) {
+    allTechStack.add(w);
+    newWords += "<span class=\"tech-stack "+ getClassName(w) +"\" >" + w + "</span>";
+    if (cnt++ < words.length - 1) {
+      newWords += ", ";
     }
-  }, function() {
-    console.log("2");
-    currStack = "";
-    var classList = $(this).attr('class').split(/\s+/);
-    $.each(classList, function(index, item) {
-      if (item !== "tech-stack") {
-        currStack = item;
-      }
-    });
-
-    if (currStack != "tech-stack") {
-      $("#projects").find("."+currStack).removeClass("highlighted");
-    }
-  });
+  }
+  t.html(line[0] + "&nbsp;" + newWords); 
 }
 
+// put words in [interests] from div#intro under <span>
+function highlightKeywords() {
+  let newHTML = ""
+  let oldHTML = $("div#intro").html()
+  let prevI = 0
+  let startI = 0
+  let spanMap = keywords.keys()
+  for (let i = 0; i < keywords.size; i++) {
+    if (i > 0) {
+      prevI = startI + interests[i - 1].length
+    }
+    startI = oldHTML.indexOf(interests[i])
+    newHTML += oldHTML.slice(prevI, startI)
+    newHTML += "<span id='" + spanMap.next().value + "'>" + interests[i] + "</span>"
+  }
+
+  prevI = startI + interests[interests.length - 1].length
+  newHTML += oldHTML.slice(prevI, newHTML.length)
+
+  $("div#intro").html(newHTML)
+
+  keywords.forEach((val, key, map) => {
+    val.forEach(e => $("div#projects span.tech-stack."+getClassName(e)).addClass(key))
+  })
+
+  $("div#intro span").each(function() {
+    attachHoverOverListener("div#intro span", this.id)
+  })
+}
+
+function attachHoverOverListener(dom, id) {
+  const _dom = dom + "#" + id
+  $(_dom).hover(
+    // add to highlighted class when hovering over
+    () => { 
+      $(_dom).addClass("highlighted")
+      $("div#projects span." + id).addClass("highlighted")
+    },
+    // remove from highlighted class when no longer hovering over
+    () => {
+      $(_dom).removeClass("highlighted")
+      $("div#projects span." + id).removeClass("highlighted")
+    }
+  )
+}
+
+/* sanitize input into a HTML class name
+ * e.g. "Vue.js" -> "vue-js", "Apache Hbase" -> "apache-hbase"
+ */
 function getClassName(word) {
-  return word.toLowerCase().split(" ").join("-");
+  return word.toLowerCase().split(/[\s.]+/).join("-");
 }
 
+// credit to https://codepen.io/gavra/pen/tEpzn
 function typewriter() {
   // set up text to print, each item in array is new line
   var aText = new Array(
     "I am a rising ECE senior in CMU and a SWE intern at Salesforce.", 
-    "I am interested in full-stack web development and machine learning.",
+    "I am interested in web development, big data and machine learning.",
     "In my free time, I cook and make websites."
   );
   var iSpeed = 5; // time delay of print out
