@@ -11,6 +11,6 @@ const keywords = new Map([
 						 "vue.js", "vuex", "vuetify", "firebase", 
 			   			 "mongodb", "express.js", "node.js",
 			   			 "django", "postgresql", "materialize"]],
-	["big-data", ["apache hbase", "apache phoenix"]],
+	// ["big-data", ["apache hbase", "apache phoenix"]],
 	["machine-learning", ["pytorch", "scikit-learn"]]
 ])
